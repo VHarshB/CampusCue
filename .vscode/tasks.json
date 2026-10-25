@@ -1,0 +1,12 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Commit updated files",
+			"type": "shell",
+			"command": "git status --short --branch; git diff --stat; git add README.md SKILL.md TEST_PLAN.md; git commit -m \"Update CampusCue project files\"; if ($LASTEXITCODE -eq 0) { git push origin main }",
+			"isBackground": false,
+			"problemMatcher": []
+		}
+	]
+}

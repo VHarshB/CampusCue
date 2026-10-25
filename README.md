@@ -1,130 +1,370 @@
+
 # CampusCue — Make Your Gap Count
 
-**Cubbie Hackathon · Track 1 · ASU**  
-**One-liner:** CampusCue turns an awkward gap between classes into one nearby activity that fits your **free time, current location, mood, budget, and social energy**.
+**Cubbie Hackathon | Track 1 | Arizona State University**
 
-> **Team north star:** Not another list of campus events. One actionable, verified suggestion for *this student, right now*.
->
-> **Current status:** Skill drafted, **not yet confirmed working on a real Cubbie account**. Do not present a mockup as a live result.
+CampusCue transforms free time between classes into personalized campus experiences.
 
-## 🔥 Everyone starts here — parallel ownership
+Instead of immediately showing students a list of events, Cubbie first understands how they're feeling, what they want to do, and how much time they have.
 
-**Create 5 GitHub Issues** using the exact titles below (issue instructions: [`docs/GITHUB_ISSUES.md`](docs/GITHUB_ISSUES.md)). Assign one owner to each, add a due time, and move them across **Todo → In progress → Review → Done**. Replace role placeholders with GitHub handles. These are *workstreams*, not a claim that five people are eligible to register; see team-size note below.
+Then it recommends something worthwhile, nearby, and realistic.
 
-| Owner / issue | Starts immediately | Deliverable / definition of done |
-|---|---|---|
-| **You — #1 Repo & Integration** | Invite collaborators; enable Issues; create issue board; protect `main`; confirm hackathon cutoff | Installed real Skill, merged reviewed PRs, tested commit URL, final submission |
-| **Agent Builder A — #2 Skill Behavior** | Own `SKILL.md` triggers, consent, calendar/mood logic | Natural text activates Skill; asks only for missing info; one pick + backup; safe fallback |
-| **Agent Builder B — #3 ASU Events & Feasibility** | Verify Sun Devil Central retrieval; event filters; time/location constraints | Genuine source links; eligibility/time check; reliable no-match behavior; report access blockers |
-| **Agent Builder C — #4 Test & Reliability** | Write/execute tests, test Cubbie install, document failures | Evidence for successful real-account run; no fake GPS or friend-matching; sanitized demo recording |
-| **Video Lead — #5 Film & Social Launch** | Scout locations, film campus B-roll, plan edit/storyboard now | 55–60-second vertical cinematic video with **real** Cubbie output inserted after testing |
+> **Our goal:** Make Cubbie feel like a thoughtful campus friend who understands your mood before suggesting what to do.
 
-**Do not wait for each other:** A works on Skill wording, B investigates event access, C prepares tests, Video Lead shoots B-roll, and you set up the repo/issues **in parallel**. Video Lead gets the real-screen recording from C after first verified pass.
+## The Problem
 
-**Registration caution:** The hackathon form currently specifies **up to 4 team members**. If all five workstreams belong to five different people, confirm with organizers whether a separate video collaborator is allowed/how to credit them. Consolidate roles if only four people are registered.
+Students frequently have unexpected free time between classes.
 
-## 🎯 The exact problem and MVP
+Campus is full of events, organizations, activities, and interesting places, but finding something relevant at the right moment can be frustrating.
 
-> “I have 45 minutes before my next class. I'm near Hayden Library and want to be social, but don't want to spend money. What's one thing I can do?”
+Traditional campus event platforms show what's happening.
 
-CampusCue should:
+They don't necessarily understand:
 
-1. **Free time:** Read a connected Google Calendar with user permission, or use the student's stated time. Do not assume Canvas deadlines imply physical class times.
-2. **Current location:** Use a building / area shared **on demand**. A calendar location is *not* the student's live GPS. Native continuous GPS is not a documented Skill ability.
-3. **Mood + social intent:** Understand what the student said (social, tired, focused, bored, wants company, wants solitude), and use optional budget/preferences.
-4. **Real campus discovery:** Prefer ASU **Sun Devil Central**; check the official event/venue page, with ASU Events as a fallback. The team must **verify** that Cubbie can retrieve specific listings. Do **not** assume a native Sun Devil Central integration exists merely because a website is available.
-5. **Make it feasible:** Verify timing, venue, drop-in eligibility, cost (if published), and travel/transition buffer before the next commitment. Do not manufacture walking ETAs.
-6. **One pick + one backup:** Explain *why* it fits, link the source, and offer directions / reminder / social icebreaker if appropriate. Ask before taking external action.
+- How a student feels
+- What they actually want
+- How much time they have
+- Where they currently are
+- Whether attending an event is practical
 
-**Hard scope boundary for Track 1:** NO always-on GPS, NO cross-user matching, NO unsolicited location tracking, NO fake “students nearby,” NO backend or new app. Student-to-student introductions with consent and shared coordination belong to Track 2.
+CampusCue bridges this gap.
 
-### Success = this specific behavior
+## Our Solution
 
-- A student texts Cubbie naturally; the Skill activates.
-- Student's time, volunteered location, and mood actually affect the recommendation.
-- Result cites a **real, current source** with a joinable option **or honestly says no verified event fits**.
-- The response is short enough for iMessage, never claims secret access to calendars, location or other students.
-- Tested from a public GitHub commit on a **real** Cubbie account.
+CampusCue is a conversational campus discovery Skill built for Cubbie.
 
-## 🎥 58-second video — script and shot plan
+It combines:
 
-Full camera/edit instructions: [`docs/VIDEO_SCRIPT.md`](docs/VIDEO_SCRIPT.md). **Shoot narrative B-roll now; insert authentic app footage later.**
+**Mood + Intention + Time + Location**
 
-| Time | Visual (9:16 vertical) | Narration / sound |
-|---|---|---|
-| **0–7 s** | Class ends. Student looks at phone: **45 MIN FREE**. Crowded ASU campus, yet they sit alone. | “Ever have 45 minutes between classes… and somehow nothing to do?” |
-| **7–14 s** | Frustrated scrolling: crowded event lists, confusing options. Rack focus to students laughing in distance. | “Campus is full of people and events. But what’s actually for you, right now?” |
-| **14–22 s** | Close-up: **real iMessage** to Cubbie: “45 min free. Near Hayden. Feeling social. Anything free?” | “So instead of opening five apps, I text Cubbie.” |
-| **22–32 s** | Clean typography overlays: **TIME / LOCATION / MOOD**; then actual tested Cubbie response. | “CampusCue considers my free time, where I am, and how I’m feeling.” |
-| **32–43 s** | Official ASU event page on phone; real best pick with source link; walking toward venue. | “It finds actual campus activities and recommends one that fits before my next class.” |
-| **43–52 s** | Student hesitates at door, glances at Cubbie’s simple icebreaker, goes in and says hello. | “Even if showing up alone feels awkward, it helps with the first hello.” |
-| **52–58 s** | Warm, candid moment with new acquaintances. End card: **CAMPUSCUE — MAKE YOUR GAP COUNT.** | “Less scrolling. More living. CampusCue. Built for Cubbie.” |
+to recommend one useful campus activity.
 
-**Must stay honest:** If no real event qualifies when filming, show an actual no-event fallback with a verified campus activity instead. Do not stage the tool's answer as if the recommendation happened. Staged human interactions are fine as **illustrative lifestyle scenes**.
+The main innovation isn't simply finding events.
 
-## 📂 Repository map
+It's understanding the student before making a suggestion.
 
-```
+## How It Works
+
+### Step 1 — Understand the Student
+
+Student:
+"Cubbie, I'm bored. What should I do?"
+
+Cubbie:
+"What's your mood right now—social, chill, or adventurous? And what do you feel like doing?"
+
+CampusCue starts with a natural conversation rather than immediately generating recommendations.
+
+### Step 2 — Understand Their Situation
+
+Student:
+"Feeling social! I want to meet new people."
+
+Cubbie:
+"Nice! How much time do you have, and where on campus are you?"
+
+CampusCue asks only for missing information.
+
+If the student already gave their time, location, mood, or goal, it doesn't ask again.
+
+### Step 3 — Find a Suitable Activity
+
+CampusCue checks relevant official campus sources and evaluates:
+
+- Mood and interests
+- Available time
+- Current campus area
+- Event timing and location
+- Registration requirements
+- Budget
+- Whether attending is actually feasible
+
+### Step 4 — Recommend Something Useful
+
+CampusCue returns:
+
+- One best recommendation
+- A brief reason it fits
+- Verified time/location details when relevant
+- An official event link
+- One backup only when useful
+
+Responses are short, friendly, and conversational.
+
+If no suitable event can be verified, Cubbie provides an honest, practical alternative.
+
+**Note:** The examples illustrate intended conversation behavior, not live verified event results.
+
+## Key Features
+
+### 1. Mood-First Discovery
+
+CampusCue learns how the student feels before recommending an experience.
+
+Different moods lead to different suggestions.
+
+For example:
+
+| Student mood | Suitable experiences |
+|---|---|
+| Social | Public events, student organizations, casual gatherings |
+| Relaxed | Quiet areas, peaceful outdoor activities |
+| Productive | Study spots, workshops, learning opportunities |
+| Adventurous | New places, exhibitions, interesting events |
+| Tired | Low-effort breaks and comfortable spaces |
+
+The student always controls what kind of experience they want.
+
+### 2. Personalized Conversation
+
+CampusCue doesn't use a rigid questionnaire.
+
+It asks one or two short questions when important information is missing.
+
+It avoids repeating questions the student has already answered.
+
+When enough context exists, it moves directly to a recommendation.
+
+### 3. Time-Aware Suggestions
+
+CampusCue considers the student's available free time.
+
+If Google Calendar is connected and access is authorized, it can use relevant calendar information.
+
+Otherwise, it simply asks how much time remains.
+
+Suggestions should leave reasonable time to return to the next commitment.
+
+### 4. Location-Aware Discovery
+
+CampusCue uses the student's voluntarily shared campus or building.
+
+It does not assume access to live GPS.
+
+Activities should be realistically accessible from the student's location.
+
+### 5. Real Campus Sources
+
+For ASU, CampusCue prioritizes:
+
+- [Sun Devil Central](https://sundevilcentral.eoss.asu.edu/)
+- [ASU Events](https://events.asu.edu/)
+- [ASU Student Life](https://studentlife.asu.edu/whats-happening)
+
+Events should be verified whenever possible before being recommended.
+
+A public website does not automatically mean Cubbie has a native integration with it.
+
+### 6. Short, Human Responses
+
+CampusCue should feel natural through iMessage.
+
+Target lengths:
+
+- Discovery questions: 15–35 words
+- Recommendations: 25–55 words, excluding links
+
+No large event lists, robotic templates, unnecessary explanations, or repetitive follow-up questions.
+
+## MVP Scope — Track 1
+
+The first version focuses on:
+
+1. Activating from natural student messages.
+2. Asking about mood and desired activity when unknown.
+3. Collecting essential time and location context.
+4. Finding relevant campus events and activities.
+5. Checking feasibility using available information.
+6. Returning one concise, personalized recommendation.
+7. Handling situations where no suitable event exists.
+
+### Out of Scope
+
+CampusCue Track 1 does not claim to provide:
+
+- Continuous GPS tracking
+- Automatic background recommendations
+- Nearby student identification
+- Direct student-to-student matching
+- Guaranteed introductions
+- An independent mobile application or backend
+
+These are not required for this Skill.
+
+## Repository Structure
+
+```text
 CampusCue/
-├── README.md                  # Single source of truth: owners, scope, script, status
-├── SKILL.md                   # Actual Cubbie Skill (install this)
-├── docs/
-│   ├── GITHUB_ISSUES.md       # Paste-ready Issues / acceptance criteria
-│   ├── TEST_PLAN.md           # Real account test matrix and evidence table
-│   └── VIDEO_SCRIPT.md       # Director-ready storyboard, VO, shot list, edit notes
-└── .github/
-    └── PULL_REQUEST_TEMPLATE.md
+├── README.md
+├── SKILL.md
+└── TEST_PLAN.md
 ```
 
-## 🛠 Team GitHub rules
+**README.md:** Project overview, behavior, development, and demo guidance.
 
-1. **Issues first.** Create the 5 issues from [`docs/GITHUB_ISSUES.md`](docs/GITHUB_ISSUES.md), assign owners and labels: `track-1`, `skill`, `events`, `qa`, `video`, `blocked`.
-2. **One branch per issue:** e.g. `feature/skill-flow`, `research/event-source`, `test/cubbie-validation`, `docs/video`, `release/track1`.
-3. **PR to `main`**, refer to its issue (`Closes #...`), and have at least one teammate review. **Do not all edit the same file at once.**
-4. **Every bug gets an Issue** with test message, actual reply, expected reply, and sanitized evidence. Never commit calendar, names, private locations, passwords, or account tokens.
-5. **Only one person merges/release-tags:** Repo & Integration lead. Agent Builder C gives QA approval; Video Lead uses only approved recordings.
-6. **Push frequently**, and record decisions/blockers in the matching Issue. If blocked >20 minutes, post what failed and switch to independent work.
+**SKILL.md:** Cubbie's actual conversation and recommendation instructions.
 
-## ⏱ Build order (relative to kickoff)
+**TEST_PLAN.md:** Test scenarios, expected behavior, and release checks.
 
-- **Before / at start:** Repo, Issues, confirmed cutoff, event source reconnaissance, location scouting, shot list.
-- **First work block:** A refines instructions, B tests real events, C writes scenarios, video shoots narrative scenes, you invite + coordinate.
-- **Integration block:** Merge changes → text GitHub link to Cubbie → approve install → run actual scenarios → patch failures.
-- **Freeze before cutoff:** Stop new features; get one clean end-to-end run, save tested commit, publish entry, capture real screenshots, final video.
+## Team Development Plan
 
-Official site currently says Track 1 finishes within the **first 10 hours**, with exact cutoff to be confirmed. Check the live rules before relying on this timing: https://hackathon.cubbie.ai/
+Work can be divided into parallel responsibilities.
 
-## 📲 Install, demo and submit
+| Workstream | Responsibility |
+|---|---|
+| Repository & Integration | Manage repository, issues, collaboration, Skill installation, and submission |
+| Skill Behavior | Improve mood-first interaction, follow-ups, personalization, and concise responses |
+| Event Discovery | Investigate official campus sources and verify activity feasibility |
+| Testing & Reliability | Test real Cubbie replies, edge cases, and unsupported capabilities |
+| Demo & Video | Record a clear, engaging demonstration using authentic Cubbie behavior |
 
-1. Make the GitHub repo **public**. Push `SKILL.md` at the repo root.
-2. In your Cubbie iMessage chat, text the **actual repo URL** and say yes after reviewing the installation summary.
-3. Run the test prompts in [`docs/TEST_PLAN.md`](docs/TEST_PLAN.md). If Cubbie cannot access a source, record that and fix the flow; don't fabricate a result.
-4. If you update the Skill, text Cubbie `update campuscue` and approve the new install (installed versions are pinned to a commit).
-5. Record the **tested commit SHA/URL**, Skill link, one-line student use case, and approved optional public video URL.
-6. Submit **Track 1** on https://hackathon.cubbie.ai/ before the cutoff. Track 1 is mandatory to unlock Track 2 and 3.
+These are workstreams, not necessarily separate registered team members. Follow the hackathon's current team-size rules.
 
-**Submission one-liner:** “CampusCue turns free time between classes into a real nearby activity tailored to your schedule, location, mood and social vibe.”
+### Collaboration Guidelines
 
-## 📌 Live launch tracker (update in every standup)
+1. Create a GitHub Issue for each workstream.
+2. Assign responsibilities clearly.
+3. Use separate branches when working concurrently.
+4. Submit changes through pull requests.
+5. Test the Skill before merging or releasing.
+6. Avoid committing private student information or account credentials.
 
-| Item | Status | Owner | Evidence / link |
-|---|---|---|---|
-| Repo public + collaborators invited | ⬜ | Repo lead | |
-| GitHub issues assigned | ⬜ | Repo lead | |
-| Skill logic / consent complete | ⬜ | Builder A | |
-| Event source checked | ⬜ | Builder B | |
-| Cubbie installs Skill successfully | ⬜ | Builder C + repo lead | |
-| End-to-end recommended activity verified | ⬜ | Builder C | |
-| 58-second demo with real result | ⬜ | Video Lead | |
-| Track 1 submitted + commit recorded | ⬜ | Repo lead | |
+## Testing
 
-## 🔗 Ground-truth references
+The Skill must be tested on a real Cubbie account before its behavior is described as verified.
 
-- Hackathon rules: https://hackathon.cubbie.ai/
-- Official Cubbie kit: https://github.com/imaginix-inc/cubbie-hackathon-kit
-- Cubbie Skill guide: https://hackathon.cubbie.ai/skill.md
-- ASU Sun Devil Central: https://sundevilcentral.eoss.asu.edu/
-- ASU official events platform: https://events.asu.edu/
-- ASU explanation of Sun Devil Central events: https://eoss.asu.edu/clubs/manage-your-student-organization
+See [TEST_PLAN.md](TEST_PLAN.md).
 
-**Rule:** Cubbie’s access to Google Calendar depends on a student linking their account. Live native GPS / native Sun Devil Central integration have **not** been independently verified; test before claiming them in the video.
+### Critical Scenarios
+
+**Test 1: Unknown Mood**
+
+Message:
+"I'm bored. What should I do?"
+
+Expected:
+Cubbie asks about mood and desired experience before suggesting events.
+
+**Test 2: Mood Already Provided**
+
+Message:
+"I'm feeling social and want to meet people."
+
+Expected:
+Cubbie asks only for missing information, such as time and campus location.
+
+**Test 3: Complete Context**
+
+Message:
+"I'm near Hayden, have 45 minutes, and want a free social event."
+
+Expected:
+Cubbie proceeds directly to finding a suitable activity without unnecessary questions.
+
+**Test 4: Short Responses**
+
+Expected:
+Cubbie replies naturally and concisely without producing a lengthy event report.
+
+**Test 5: No Verified Events**
+
+Expected:
+Cubbie explains that no suitable event was verified and provides a practical alternative.
+
+**Test 6: Privacy**
+
+Expected:
+Cubbie never invents GPS access, nearby students, or access to private information.
+
+### Release Requirements
+
+- Skill installs successfully.
+- Mood-first conversation works.
+- Already supplied information is not repeatedly requested.
+- Recommendations fit stated constraints.
+- Event facts are verified where possible.
+- Replies are concise.
+- No unavailable capabilities are claimed.
+- Real-account tests and observed results are documented.
+
+## Demo Video — 58-Second Concept
+
+The demo should communicate how CampusCue transforms a student's free time into a personalized experience.
+
+| Time | Visual | Narration |
+|---|---|---|
+| 0–7 sec | Student finishes class with 45 minutes free | "Ever have time between classes and absolutely no idea what to do?" |
+| 7–14 sec | Student scrolls through overwhelming event listings | "There's so much happening on campus, but what's actually for you?" |
+| 14–22 sec | Student texts Cubbie | "So I asked Cubbie." |
+| 22–32 sec | Cubbie asks about mood and what the student wants | "Instead of throwing events at me, it first understands how I'm feeling." |
+| 32–43 sec | Authentic concise recommendation appears with official source | "Then it finds something that actually fits my time, mood, and location." |
+| 43–52 sec | Student follows through on the suggestion | "Less scrolling, and more time actually doing something." |
+| 52–58 sec | Campus activity and CampusCue end card | "CampusCue. Make your gap count." |
+
+Use genuine Cubbie output for the product demonstration.
+
+Staged campus lifestyle footage is acceptable, but it should not be represented as evidence of a real event recommendation.
+
+If no real event qualifies, demonstrate the honest fallback behavior instead.
+
+## Installation
+
+1. Keep this GitHub repository public.
+2. Ensure `SKILL.md` exists in the repository root.
+3. Open your Cubbie iMessage conversation.
+4. Share the GitHub repository URL.
+5. Follow the Skill installation prompts and approve installation.
+6. Test using the scenarios above.
+
+Repository:
+
+https://github.com/VHarshB/CampusCue
+
+### Updating an Installed Skill
+
+After modifying `SKILL.md`, request a CampusCue update in Cubbie and approve the new version.
+
+Installed versions may be pinned to an earlier GitHub commit.
+
+Always confirm the latest version is installed before testing.
+
+## Submission
+
+Before final submission:
+
+1. Verify the Skill installs and activates.
+2. Test the mood-first discovery flow.
+3. Verify concise, personalized recommendations.
+4. Document results from an actual Cubbie account.
+5. Record the tested GitHub commit.
+6. Include authentic demonstration evidence.
+7. Follow the official hackathon submission requirements and deadlines.
+
+Official hackathon:
+
+https://hackathon.cubbie.ai/
+
+## References
+
+- [Cubbie Hackathon](https://hackathon.cubbie.ai/)
+- [Official Cubbie Hackathon Kit](https://github.com/imaginix-inc/cubbie-hackathon-kit)
+- [Cubbie Skill Guide](https://hackathon.cubbie.ai/skill.md)
+- [ASU Sun Devil Central](https://sundevilcentral.eoss.asu.edu/)
+- [ASU Events](https://events.asu.edu/)
+- [ASU Student Life](https://studentlife.asu.edu/whats-happening)
+
+## Our Vision
+
+CampusCue isn't about recommending more events.
+
+It's about making campus life feel more accessible, personal, and spontaneous.
+
+Sometimes students want to meet people.
+
+Sometimes they want to explore.
+
+Sometimes they just need a quiet break.
+
+**CampusCue understands the difference.**
+
+**Make Your Gap Count.**
