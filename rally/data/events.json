@@ -1,0 +1,21 @@
+{
+  "_note": "Backup events for demos, used when a Sun Devil Central page can't be read. These are SAMPLES: replace them with real upcoming events (copy the real event link into url) before the demo, and never present a sample as a real event.",
+  "events": [
+    {
+      "title": "Sample: Salsa Night",
+      "url": "https://sundevilcentral.eoss.asu.edu/sample-salsa-night",
+      "starts_at": "2026-10-30T19:00:00-07:00",
+      "ends_at": "2026-10-30T21:00:00-07:00",
+      "location": "Memorial Union",
+      "note": "Replace with a real event before the demo."
+    },
+    {
+      "title": "Sample: Club Fair Social",
+      "url": "https://sundevilcentral.eoss.asu.edu/sample-club-social",
+      "starts_at": "2026-10-31T17:30:00-07:00",
+      "ends_at": "2026-10-31T19:30:00-07:00",
+      "location": "Hayden Lawn",
+      "note": "Replace with a real event before the demo."
+    }
+  ]
+}

@@ -1,0 +1,487 @@
+{
+  "_note": "Starter list near ASU Tempe. Prices are rough dollars per person, walk_min is a rough walk from the Memorial Union, and vibe runs from 0 (chill) to 1 (party). CHECK EVERY ENTRY before the demo: hours, prices, age rules and menus change. Add your own favorite spots.",
+  "places": [
+    {
+      "name": "Memorial Union food court",
+      "kind": "food",
+      "cuisine": [
+        "fast food",
+        "pizza",
+        "burgers",
+        "asian",
+        "salad"
+      ],
+      "price": 12,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free",
+        "halal"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.3,
+      "walk_min": 1,
+      "area": "Memorial Union, ASU Tempe",
+      "link": ""
+    },
+    {
+      "name": "Pita Jungle (Mill Ave)",
+      "kind": "food",
+      "cuisine": [
+        "mediterranean",
+        "healthy",
+        "falafel",
+        "hummus"
+      ],
+      "price": 16,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free"
+      ],
+      "age_21": false,
+      "alcohol": true,
+      "alcohol_focused": false,
+      "vibe": 0.3,
+      "walk_min": 12,
+      "area": "Mill Ave, Tempe",
+      "link": ""
+    },
+    {
+      "name": "Chipotle (Mill Ave)",
+      "kind": "food",
+      "cuisine": [
+        "mexican",
+        "burrito",
+        "bowls",
+        "tacos"
+      ],
+      "price": 12,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.2,
+      "walk_min": 11,
+      "area": "Mill Ave, Tempe",
+      "link": ""
+    },
+    {
+      "name": "Cafe Lalibela",
+      "kind": "food",
+      "cuisine": [
+        "ethiopian",
+        "stew",
+        "injera"
+      ],
+      "price": 18,
+      "diets": [
+        "vegetarian",
+        "vegan"
+      ],
+      "age_21": false,
+      "alcohol": true,
+      "alcohol_focused": false,
+      "vibe": 0.2,
+      "walk_min": 20,
+      "area": "University Dr, Tempe",
+      "link": ""
+    },
+    {
+      "name": "Raising Cane's (Apache Blvd)",
+      "kind": "food",
+      "cuisine": [
+        "chicken",
+        "fast food",
+        "fried"
+      ],
+      "price": 11,
+      "diets": [],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.3,
+      "walk_min": 15,
+      "area": "Apache Blvd, Tempe",
+      "link": ""
+    },
+    {
+      "name": "In-N-Out Burger (Tempe)",
+      "kind": "food",
+      "cuisine": [
+        "burgers",
+        "fast food",
+        "fries"
+      ],
+      "price": 9,
+      "diets": [],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.3,
+      "walk_min": 25,
+      "area": "Tempe",
+      "link": ""
+    },
+    {
+      "name": "Dave's Hot Chicken (Tempe)",
+      "kind": "food",
+      "cuisine": [
+        "chicken",
+        "spicy",
+        "fast food"
+      ],
+      "price": 14,
+      "diets": [],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.4,
+      "walk_min": 14,
+      "area": "Tempe",
+      "link": ""
+    },
+    {
+      "name": "Ike's Love & Sandwiches (Tempe)",
+      "kind": "food",
+      "cuisine": [
+        "sandwiches",
+        "subs"
+      ],
+      "price": 14,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.2,
+      "walk_min": 10,
+      "area": "Tempe",
+      "link": ""
+    },
+    {
+      "name": "Snooze, an A.M. Eatery (Tempe)",
+      "kind": "food",
+      "cuisine": [
+        "breakfast",
+        "brunch",
+        "pancakes"
+      ],
+      "price": 20,
+      "diets": [
+        "vegetarian",
+        "gluten_free"
+      ],
+      "age_21": false,
+      "alcohol": true,
+      "alcohol_focused": false,
+      "vibe": 0.3,
+      "walk_min": 12,
+      "area": "Tempe",
+      "link": ""
+    },
+    {
+      "name": "Four Peaks Brewing Co. (8th St)",
+      "kind": "food",
+      "cuisine": [
+        "american",
+        "burgers",
+        "pub food",
+        "beer"
+      ],
+      "price": 22,
+      "diets": [
+        "vegetarian"
+      ],
+      "age_21": false,
+      "alcohol": true,
+      "alcohol_focused": false,
+      "vibe": 0.6,
+      "walk_min": 20,
+      "area": "8th St, Tempe",
+      "link": ""
+    },
+    {
+      "name": "Insomnia Cookies (Tempe)",
+      "kind": "cafe",
+      "cuisine": [
+        "dessert",
+        "cookies",
+        "late night"
+      ],
+      "price": 7,
+      "diets": [
+        "vegetarian",
+        "vegan"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.3,
+      "walk_min": 10,
+      "area": "Tempe",
+      "link": ""
+    },
+    {
+      "name": "Dutch Bros Coffee (Tempe)",
+      "kind": "cafe",
+      "cuisine": [
+        "coffee",
+        "drinks",
+        "boba"
+      ],
+      "price": 6,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free",
+        "dairy_free"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.2,
+      "walk_min": 10,
+      "area": "Tempe",
+      "link": ""
+    },
+    {
+      "name": "Taco spot crawl on Mill Ave",
+      "kind": "food",
+      "cuisine": [
+        "tacos",
+        "mexican",
+        "late night"
+      ],
+      "price": 12,
+      "diets": [
+        "vegetarian"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.5,
+      "walk_min": 12,
+      "area": "Mill Ave, Tempe",
+      "link": ""
+    },
+    {
+      "name": "Main Event (Tempe Marketplace)",
+      "kind": "activity",
+      "cuisine": [
+        "bowling",
+        "arcade",
+        "laser tag",
+        "games"
+      ],
+      "price": 25,
+      "diets": [
+        "vegetarian"
+      ],
+      "age_21": false,
+      "alcohol": true,
+      "alcohol_focused": false,
+      "vibe": 0.55,
+      "walk_min": 35,
+      "area": "Tempe Marketplace",
+      "link": ""
+    },
+    {
+      "name": "Harkins Theatres (Tempe Marketplace)",
+      "kind": "activity",
+      "cuisine": [
+        "movie",
+        "cinema"
+      ],
+      "price": 15,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.2,
+      "walk_min": 35,
+      "area": "Tempe Marketplace",
+      "link": ""
+    },
+    {
+      "name": "Tempe Town Lake walk",
+      "kind": "activity",
+      "cuisine": [
+        "walk",
+        "outdoors",
+        "sunset"
+      ],
+      "price": 0,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free",
+        "halal",
+        "kosher",
+        "dairy_free"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.1,
+      "walk_min": 15,
+      "area": "Tempe Beach Park",
+      "link": ""
+    },
+    {
+      "name": "Game night at the MU",
+      "kind": "activity",
+      "cuisine": [
+        "board games",
+        "games",
+        "cards"
+      ],
+      "price": 0,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free",
+        "halal",
+        "kosher",
+        "dairy_free"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.45,
+      "walk_min": 1,
+      "area": "Memorial Union, ASU Tempe",
+      "link": ""
+    },
+    {
+      "name": "Sun Devil Fitness Complex",
+      "kind": "activity",
+      "cuisine": [
+        "gym",
+        "basketball",
+        "swim",
+        "workout"
+      ],
+      "price": 0,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free",
+        "halal",
+        "kosher",
+        "dairy_free"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.4,
+      "walk_min": 5,
+      "area": "ASU Tempe",
+      "link": ""
+    },
+    {
+      "name": "ASU Art Museum",
+      "kind": "activity",
+      "cuisine": [
+        "art",
+        "museum",
+        "exhibit"
+      ],
+      "price": 0,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free",
+        "halal",
+        "kosher",
+        "dairy_free"
+      ],
+      "age_21": false,
+      "alcohol": false,
+      "alcohol_focused": false,
+      "vibe": 0.1,
+      "walk_min": 8,
+      "area": "ASU Tempe",
+      "link": ""
+    },
+    {
+      "name": "Karaoke night",
+      "kind": "activity",
+      "cuisine": [
+        "karaoke",
+        "singing"
+      ],
+      "price": 15,
+      "diets": [
+        "vegetarian"
+      ],
+      "age_21": false,
+      "alcohol": true,
+      "alcohol_focused": false,
+      "vibe": 0.75,
+      "walk_min": 15,
+      "area": "Tempe",
+      "link": ""
+    },
+    {
+      "name": "Mill Ave dance club",
+      "kind": "bar",
+      "cuisine": [
+        "dancing",
+        "club",
+        "party",
+        "drinks"
+      ],
+      "price": 20,
+      "diets": [
+        "vegetarian",
+        "vegan",
+        "gluten_free",
+        "halal",
+        "kosher",
+        "dairy_free"
+      ],
+      "age_21": true,
+      "alcohol": true,
+      "alcohol_focused": true,
+      "vibe": 0.95,
+      "walk_min": 12,
+      "area": "Mill Ave, Tempe",
+      "link": ""
+    },
+    {
+      "name": "Casey Moore's Oyster House",
+      "kind": "bar",
+      "cuisine": [
+        "bar",
+        "patio",
+        "seafood",
+        "drinks"
+      ],
+      "price": 25,
+      "diets": [
+        "gluten_free"
+      ],
+      "age_21": true,
+      "alcohol": true,
+      "alcohol_focused": true,
+      "vibe": 0.7,
+      "walk_min": 18,
+      "area": "Ash Ave, Tempe",
+      "link": ""
+    }
+  ]
+}
